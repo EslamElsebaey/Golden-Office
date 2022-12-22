@@ -1,0 +1,205 @@
+
+.mainBanner{
+    .mainBanner-parent{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+   }
+   figure {
+    width: 100%;
+   }
+   .swiper{
+    height: 100%;
+   }
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after , .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: "";
+}
+
+
+
+
+
+.banner-desc{
+    .consult-btn{
+        margin-inline-start: 10px;
+    }
+
+}
+  
+
+.mainslider-item {
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+       
+    }
+} 
+
+.mainslider-item{
+    a{
+        height: 100%;
+        width: 100%;
+    }
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    width: 37px;
+    height: 37px;
+    background-color:rgba(0, 0, 0, 0.502);
+    border-radius: 50%;
+    transition: all linear 0.3s;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &:hover{
+        background-color: $main-color;
+        i {
+            color: #000000;
+        }
+    }
+}
+.mainBanner{
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 25px;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 25px;
+    }
+}
+.mainslider-item{
+    position: relative;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev i {
+    font-size: 20px;
+}
+.banner-desc{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50% , -50%);
+   h1{
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Tajawal";
+    text-align: center;
+    filter: drop-shadow(0 0 10px rgba(5,6,6,0.2));
+    margin-bottom: 25px;
+    text-transform: capitalize;
+   }
+   h4{
+    font-size: 22px;
+    max-width: 50%;
+    margin: auto;
+    line-height: 36px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+}
+
+figure{
+    position: relative;
+}
+
+figure::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #000000, $alpha: 0.502);
+    z-index: 2;
+}
+
+.swiper-pagination-bullet:only-child{
+    display: block !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 20px;
+}
+
+
+@include min-1200{
+    .mainBanner{
+        height:  calc(100vh - 92.28px)  ;
+    }
+   
+}
+
+
+@include max-768 {
+
+    .mainBanner , .about {
+        .know-btn{
+            font-size: 13px;
+            font-weight: 500;
+            padding: 5px 14px;
+            display: block;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 25px;
+        }
+        .consult-btn{
+            font-size: 13px;
+            font-weight: 500;
+            padding: 5px 17px;
+             height: auto;
+            border-radius: 25px;
+        }
+    }
+    .banner-desc .consult-btn{
+        margin-inline-start: 0;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 2px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        display: none;
+    }
+
+    .banner-desc h1{
+        font-size: 19px;
+        margin: 0 auto;
+        max-width: 70%;
+        line-height: 1.6;
+        padding: 0;
+    }
+    .banner-desc h4{
+        display: none;
+    }
+}
+
+
+@include min-768 {
+    html[dir = "ltr"]{
+        .banner-desc{
+            h1 {
+                max-width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                // margin: auto;
+            }
+        }
+    }
+}

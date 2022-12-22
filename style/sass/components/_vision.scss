@@ -1,0 +1,81 @@
+.vision {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+.vision-item{
+background-color: #ffffff;
+border: 2px solid #f2f2f2;
+text-align: center;
+padding: 45px 30px;
+transition: all linear .3s;
+}
+.vision-icon{
+    font-size: 40px;
+color: #ddb930;
+margin-bottom: 20px;
+}
+.vision-title{
+    font-size: 20px;
+    transition: all linear .3s;
+color: #000000;
+font-weight: 700;
+margin-bottom: 12px;
+text-transform: capitalize;
+}
+.vision-desc{
+font-size: 14px;
+line-height: 25px;
+color: #000000;
+font-weight: 400;
+transition: all linear .3s;
+}
+
+
+
+@include max-992 {
+    .vision-item-col{
+        margin-bottom: 20px;
+    }
+    .vision-item-col:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+@include max-768 {
+    .vision-item{
+        padding: 30px 20px;
+    }
+   
+    .vision-title{
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .vision-desc{
+        line-height: 1.7;
+    }
+    .vision-icon{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@include min-768 {
+    
+html[dir = "ltr"]{
+    .vision-desc{
+        font-size: 16px;
+    }
+}
+    .vision-item{
+        &:hover{
+            background-color: #000000;
+            border-color: #000000;
+            transform: translateY(-10px) ;
+            .vision-desc , .vision-title{
+                color: #ffffff;
+            }
+        }
+    }
+}
