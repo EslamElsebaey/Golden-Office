@@ -157,7 +157,7 @@ html[dir = "ltr"]{
         li {
             border-bottom: 1px solid #fff;
             border-color: rgba($color: #fff, $alpha: 0.149);
-            padding-bottom: 4px;
+            padding: 5px 0;
             a:hover{
                 text-decoration: none;
             }
@@ -167,7 +167,6 @@ html[dir = "ltr"]{
         }
         a{
             font-size: 14px;
-            line-height: 30px;
             color: #ffffff;
             font-weight: 400;
             text-align: center;
