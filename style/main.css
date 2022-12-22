@@ -615,7 +615,7 @@ html[dir=ltr] .li-drop::after {
   }
   .nav-ul {
     flex-direction: column;
-    margin: 80px 0 0 0 !important;
+    margin: 70px 0 0 0 !important;
     align-items: flex-start;
   }
   .nav-ul > li {
@@ -654,7 +654,7 @@ html[dir=ltr] .li-drop::after {
   }
   .close-lang-holder {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
   .lang2 a img {
