@@ -610,7 +610,7 @@ html[dir=ltr] .li-drop::after {
     width: 100%;
     z-index: 99;
     height: 100%;
-    padding: 25px 30px 0 30px;
+    padding: 25px 25px 0 25px;
     background-color: #fff;
   }
   .nav-ul {
