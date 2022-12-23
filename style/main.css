@@ -521,7 +521,6 @@ html[dir=ltr] .li-drop::after {
     padding: 5px 15px;
     border-radius: 25px;
     background-color: #ddb930;
-    margin-top: 10px;
     height: auto;
   }
   .openSearch-btn {
@@ -653,7 +652,7 @@ html[dir=ltr] .li-drop::after {
   }
   .close-lang-holder {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
   .lang2 a img {
