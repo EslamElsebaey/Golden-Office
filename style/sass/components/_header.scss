@@ -86,10 +86,6 @@ html[dir = "ltr"]{
             }
         } 
     } 
-    .li-drop::after{
-        top: 14px;
-        inset-inline-end: -13px;
-    }
 }
 .search-holder-input{
     position: relative;
@@ -106,7 +102,7 @@ html[dir = "ltr"]{
     font-family: "line Awesome free";
     font-weight: 900;
     position: absolute;
-    font-size: 12px;
+    font-size: 16px;
     inset-inline-end: 0px;
     transition: all linear 0.3s;
     }
