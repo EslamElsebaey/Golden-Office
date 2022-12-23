@@ -246,6 +246,9 @@ html[dir = "ltr"]{
     html[dir=ltr] .nav-ul > li a{
         font-size: 17px;
     }
+    .li-drop::after{
+        font-size: 16px;
+    }
     .lang a {
         color: #6c6c6c;
         display: flex;
