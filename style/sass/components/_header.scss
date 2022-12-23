@@ -99,12 +99,12 @@ html[dir = "ltr"]{
     margin-inline-end: 30px !important;
     &::after{
         content: "\f107";
-    font-family: "line Awesome free";
-    font-weight: 900;
-    position: absolute;
-    font-size: 16px;
-    inset-inline-end: 0px;
-    transition: all linear 0.3s;
+        font-family: "line Awesome free";
+        font-weight: 900;
+        position: absolute;
+        font-size: 13px;
+        inset-inline-end: 0px;
+        transition: all linear 0.3s;
     }
      > a{
         position: relative;
@@ -209,8 +209,15 @@ html[dir = "ltr"]{
     }
     .li-drop{
         &::after{
-            top: 13px;
-            inset-inline-end: -12px;
+            top: 12px;
+            inset-inline-end: -14px;
+        }
+    }
+    html[dir="ltr"]{
+        .li-drop{
+            &::after{
+                top: 13px;
+            }
         }
     }
 }
@@ -236,6 +243,9 @@ html[dir = "ltr"]{
 }
 
 @include max-768 {
+    html[dir=ltr] .nav-ul > li a{
+        font-size: 17px;
+    }
     .lang a {
         color: #6c6c6c;
         display: flex;

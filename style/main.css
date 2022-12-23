@@ -363,7 +363,7 @@ html[dir=ltr] .nav-ul > li a {
   font-family: "line Awesome free";
   font-weight: 900;
   position: absolute;
-  font-size: 16px;
+  font-size: 13px;
   inset-inline-end: 0px;
   transition: all linear 0.3s;
 }
@@ -468,8 +468,11 @@ html[dir=ltr] .nav-ul > li a {
     transform: translateX(-50%);
   }
   .li-drop::after {
+    top: 12px;
+    inset-inline-end: -14px;
+  }
+  html[dir=ltr] .li-drop::after {
     top: 13px;
-    inset-inline-end: -12px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -490,6 +493,9 @@ html[dir=ltr] .nav-ul > li a {
   }
 }
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .nav-ul > li a {
+    font-size: 17px;
+  }
   .lang a {
     color: #6c6c6c;
     display: flex;
