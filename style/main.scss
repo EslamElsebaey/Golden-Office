@@ -8,19 +8,17 @@
 @import "sass/base/base";
 @import "sass/base/fonts";
 
-//Components
 
-//Layout
-@import "sass/components/header";
-@import "sass/components/main";
-@import "sass/components/clients";
-@import "sass/components/about";
-// @import "sass/components/about";
-@import "sass/components/vision";
-@import "sass/components/services";
-// @import "sass/components/gallery";
-@import "sass/components/news";
-@import "sass/components/footer";
+//home 
+
+@import "sass/pages/home/header";
+@import "sass/pages/home/main";
+@import "sass/pages/home/clients";
+@import "sass/pages/home/about";
+@import "sass/pages/home/vision";
+@import "sass/pages/home/services";
+@import "sass/pages/home/news";
+@import "sass/pages/home/footer";
 
 
 
