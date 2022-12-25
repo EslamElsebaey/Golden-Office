@@ -154,17 +154,19 @@ figure::after{
         .know-btn{
             font-size: 13px;
             font-weight: 500;
-            padding: 5px 14px;
+            padding: 5px 0;
             display: block;
-            height: auto;
+            width: 225px;
+            height: 35px;
             margin: 15px auto;
             border-radius: 25px;
         }
         .consult-btn{
             font-size: 13px;
             font-weight: 500;
-            padding: 5px 17px;
-             height: auto;
+            // padding: 5px 0;
+            height: 35px;
+             width: 225px;
             border-radius: 25px;
         }
     }
@@ -180,8 +182,6 @@ figure::after{
 
     .banner-desc h1{
         font-size: 19px;
-        margin: 0 auto;
-        max-width: 70%;
         line-height: 1.6;
         padding: 0;
     }

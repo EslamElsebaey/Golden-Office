@@ -9,16 +9,21 @@
 @import "sass/base/fonts";
 
 
+
+
+
 //home page
 
-@import "sass/pages/home/header";
 @import "sass/pages/home/main";
 @import "sass/pages/home/clients";
 @import "sass/pages/home/about";
 @import "sass/pages/home/vision";
 @import "sass/pages/home/services";
 @import "sass/pages/home/news";
-@import "sass/pages/home/footer";
 
 
 
+
+// layout 
+@import "sass/layout/footer";
+@import "sass/layout/header";

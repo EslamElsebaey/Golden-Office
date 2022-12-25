@@ -37,7 +37,6 @@ html[dir = "ltr"] {
 .consult-btn {
   font-size: 14px;
   line-height: 26px;
-  text-transform: capitalize;
   color: #000000;
   font-weight: 700;
   text-align: center;
@@ -48,7 +47,6 @@ html[dir = "ltr"] {
 }
 .know-btn{
   font-size: 14px;
-  text-transform: capitalize;
   color: #ffffff;
   font-weight: 700;
   padding: 0 27px;
@@ -56,48 +54,23 @@ html[dir = "ltr"] {
   border-radius: 22px;
   background-color: rgba(221,185,48,0);
   border: 2px solid #ffffff;
-  transition: all linear .3s;
+  transition: all linear .2s;
   }
 
 .consult-btn{
   transition: all linear .3s;
   position: relative;
-  &::before{
-      pointer-events: none;
-      position: absolute;
-      z-index: 1;
-      content: '';
-      top: 100%;
-      inset-inline-end: 5%;
-      height: 10px;
-      width: 90%;
-      opacity: 0;
-      background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      -webkit-transition-property: transform, opacity;
-      transition-property: transform, opacity;
-  }
 }
 
 
 @include min-768 {
   .know-btn , .about .know-btn{
     &:hover{
-      background-color: $main-color;
+      background-color: #fff;
       color: #000;
-      border-color: $main-color;
+      // border-color: $main-color;
     }
   }
-   .consult-btn:hover{
-       transform: translateY(-5px);
-       &::before{
-           opacity: 1;
-           -webkit-transform: translateY(5px);
-           transform: translateY(5px);
-       }
-   }
 }
 
 
@@ -202,8 +175,27 @@ inset: 0;
 
 
 
+@include min-768 {
+  .consult-btn{
+    &:hover{
+      background-color: #ffcb00;
+    }
+}
+}
+
 
 @include max-768 {
+  .swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 3px;
+  }
+  .clients .swiper-pagination-bullet, .news .swiper-pagination-bullet{
+    opacity: .3;
+  }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
     padding-right: 20px;
     padding-left: 20px;
@@ -211,7 +203,6 @@ inset: 0;
   .title{
     font-size: 18px;
     margin-bottom: 35px;
-    font-weight: 500;
   }
   html[dir="ltr"]{
     .message input{

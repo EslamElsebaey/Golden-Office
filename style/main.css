@@ -33,7 +33,6 @@ html[dir=ltr] body {
 .consult-btn {
   font-size: 14px;
   line-height: 26px;
-  text-transform: capitalize;
   color: #000000;
   font-weight: 700;
   text-align: center;
@@ -45,7 +44,6 @@ html[dir=ltr] body {
 
 .know-btn {
   font-size: 14px;
-  text-transform: capitalize;
   color: #ffffff;
   font-weight: 700;
   padding: 0 27px;
@@ -53,40 +51,18 @@ html[dir=ltr] body {
   border-radius: 22px;
   background-color: rgba(221, 185, 48, 0);
   border: 2px solid #ffffff;
-  transition: all linear 0.3s;
+  transition: all linear 0.2s;
 }
 
 .consult-btn {
   transition: all linear 0.3s;
   position: relative;
 }
-.consult-btn::before {
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
-  content: "";
-  top: 100%;
-  inset-inline-end: 5%;
-  height: 10px;
-  width: 90%;
-  opacity: 0;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-  transition-duration: 0.3s;
-  transition-property: transform, opacity;
-}
 
 @media only screen and (min-width: 768px) {
   .know-btn:hover, .about .know-btn:hover {
-    background-color: #ddb930;
+    background-color: #fff;
     color: #000;
-    border-color: #ddb930;
-  }
-  .consult-btn:hover {
-    transform: translateY(-5px);
-  }
-  .consult-btn:hover::before {
-    opacity: 1;
-    transform: translateY(5px);
   }
 }
 .title {
@@ -180,7 +156,23 @@ img {
   width: 250px;
 }
 
+@media only screen and (min-width: 768px) {
+  .consult-btn:hover {
+    background-color: #ffcb00;
+  }
+}
 @media only screen and (max-width: 767px) {
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 3px;
+  }
+  .clients .swiper-pagination-bullet, .news .swiper-pagination-bullet {
+    opacity: 0.3;
+  }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     padding-right: 20px;
     padding-left: 20px;
@@ -188,7 +180,6 @@ img {
   .title {
     font-size: 18px;
     margin-bottom: 35px;
-    font-weight: 500;
   }
   html[dir=ltr] .message input {
     padding: 0 50px 0 25px;
@@ -262,466 +253,6 @@ img {
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
-html[dir=ltr] .search-holder input {
-  padding: 0 50px 0 25px;
-}
-
-header {
-  padding: 18px 0px 10px 0;
-  background-color: #fff;
-}
-
-nav {
-  transition: all linear 0.3s;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo a {
-  display: block;
-  width: 100%;
-}
-.logo img {
-  width: 233px;
-  max-width: 100%;
-}
-
-.consult a, .lang2 a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: #808080;
-  transition: all linear 0.3s;
-}
-.consult a:hover, .lang2 a:hover {
-  text-decoration: none;
-  color: #ddb930;
-}
-.consult a img, .lang2 a img {
-  -webkit-margin-start: 10px;
-          margin-inline-start: 10px;
-}
-
-.closeSearh-btn i {
-  font-size: 25px !important;
-}
-
-.nav-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav-ul li:last-child {
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
-}
-.nav-ul > li {
-  -webkit-margin-end: 20px;
-          margin-inline-end: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.nav-ul > li a {
-  font-size: 14px;
-  color: #000000;
-  font-weight: 500;
-  text-transform: capitalize;
-  transition: all linear 0.3s;
-  position: relative;
-}
-.nav-ul > li a:hover {
-  text-decoration: none;
-  color: #ddb930;
-}
-
-html[dir=ltr] .nav-ul > li a {
-  font-size: 15px;
-}
-
-.search-holder-input {
-  position: relative;
-  width: 238px;
-  max-width: 100%;
-  height: 40px;
-}
-
-.li-drop {
-  position: relative;
-  padding: 10px 0;
-  -webkit-margin-end: 30px !important;
-          margin-inline-end: 30px !important;
-}
-.li-drop::after {
-  content: "\f107";
-  font-family: "line Awesome free";
-  font-weight: 900;
-  position: absolute;
-  font-size: 13px;
-  inset-inline-end: 0px;
-  transition: all linear 0.3s;
-}
-.li-drop > a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.li-drop:hover::after {
-  color: #ddb930;
-}
-.li-drop:hover .ul-drop {
-  opacity: 1;
-  visibility: visible;
-}
-.li-drop .ul-drop {
-  opacity: 0.902;
-  width: 206px;
-  border-radius: 3px;
-  background-color: #000000;
-  transition: all linear 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: absolute;
-  top: 45px;
-  z-index: 11;
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-}
-.li-drop .ul-drop::after {
-  position: absolute;
-  content: "";
-  width: 0px;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #000;
-}
-.li-drop .ul-drop li {
-  border-bottom: 1px solid #fff;
-  border-color: rgba(255, 255, 255, 0.149);
-  padding: 5px 0;
-}
-.li-drop .ul-drop li a:hover {
-  text-decoration: none;
-}
-.li-drop .ul-drop li:last-child {
-  border-bottom: none;
-}
-.li-drop .ul-drop a {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 400;
-  text-align: center;
-}
-
-.openNav-btn {
-  display: none !important;
-  cursor: pointer;
-}
-.openNav-btn i {
-  font-size: 28px;
-  color: #000;
-}
-
-.open-search {
-  top: 0 !important;
-  transition: all linear 0.3s !important;
-}
-
-.closeNav-btn {
-  display: none;
-  cursor: pointer;
-}
-
-.openSearch-btn {
-  cursor: pointer;
-}
-.openSearch-btn i {
-  color: #000;
-  font-size: 23px;
-  transform: scaleX(-1);
-}
-
-.close-search {
-  display: none;
-}
-
-.open-nav {
-  inset-inline-start: -100% !important;
-}
-
-@media only screen and (min-width: 768px) {
-  .ul-drop {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .li-drop::after {
-    top: 12px;
-    inset-inline-end: -14px;
-  }
-  html[dir=ltr] .li-drop::after {
-    top: 13px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .header-content .consult-btn {
-    display: none;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .header-content {
-    flex-wrap: wrap;
-  }
-  .logo img {
-    width: 150px;
-    max-width: 100%;
-  }
-  .search-holder {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  html[dir=ltr] .nav-ul > li a {
-    font-size: 17px;
-  }
-  .li-drop::after {
-    font-size: 16px;
-  }
-  .lang a {
-    color: #6c6c6c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .lang a:hover {
-    text-decoration: none;
-  }
-  .lang a img {
-    -webkit-margin-start: 3px;
-            margin-inline-start: 3px;
-  }
-  nav {
-    text-align: center;
-  }
-  .li-drop .ul-drop li {
-    padding-bottom: 0;
-  }
-  nav .consult-btn {
-    font-size: 13px;
-    text-transform: capitalize;
-    color: #000000;
-    font-weight: 500;
-    padding: 5px 15px;
-    border-radius: 25px;
-    background-color: #ddb930;
-    height: auto;
-  }
-  .openSearch-btn {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-  }
-  header {
-    padding: 8px 0;
-  }
-  .showSearch-box {
-    display: flex !important;
-  }
-  .icon-rotate::after {
-    transform: rotate(180deg) !important;
-  }
-  html[dir=rtl] .li-drop .ul-drop a {
-    text-align: right;
-  }
-  .li-drop .ul-drop::after {
-    display: none;
-  }
-  .li-drop {
-    flex-direction: column;
-    align-items: flex-start !important;
-    -webkit-margin-end: 0 !important;
-            margin-inline-end: 0 !important;
-    padding: 0;
-  }
-  .li-drop:hover::after {
-    color: #000;
-  }
-  .li-drop a {
-    display: block;
-    width: 100%;
-  }
-  .li-drop a::after {
-    transition: all linear 0.3s;
-    position: absolute;
-    inset-inline-end: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-  }
-  .li-drop .ul-drop {
-    transition: none;
-    background-color: transparent;
-    padding: 0;
-    min-width: auto;
-    width: 100%;
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    padding-top: 5px;
-    display: none;
-  }
-  .li-drop .ul-drop li a {
-    color: #000000;
-    font-weight: 400;
-    font-size: 15px;
-  }
-  .logo img {
-    width: 150px;
-    max-width: 100%;
-  }
-  .header-content {
-    position: relative;
-    width: 100%;
-  }
-  .openNav-btn {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-  }
-  .header-content > .consult {
-    display: none;
-  }
-  .banner-overlay {
-    display: none;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    inset-inline-start: 0%;
-    width: 100%;
-    z-index: 99;
-    height: 100%;
-    padding: 25px 25px 0 25px;
-    background-color: #fff;
-  }
-  .nav-ul {
-    flex-direction: column;
-    margin: 70px 0 0 0 !important;
-    align-items: flex-start;
-  }
-  .nav-ul > li {
-    margin-bottom: 20px;
-    -webkit-margin-end: 0;
-            margin-inline-end: 0;
-    width: 100%;
-  }
-  .nav-ul > li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .nav-ul > li a:hover {
-    color: #000;
-  }
-  .nav-ul > li a::after {
-    height: auto;
-  }
-  .closeNav-btn {
-    display: block;
-  }
-  .closeNav-btn i {
-    font-size: 24px;
-    color: #6c6c6c;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  .close-search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .close-lang-holder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .lang2 a img {
-    -webkit-margin-start: 5px;
-            margin-inline-start: 5px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .closeSearh-btn {
-    display: none !important;
-  }
-  nav .consult-btn {
-    display: none;
-  }
-  .search-section {
-    display: none;
-  }
-  .close-lang-holder {
-    display: none;
-  }
-  .lang2 {
-    display: none;
-  }
-  .openSearch-btn {
-    display: none !important;
-  }
-  .contactus {
-    -webkit-margin-end: 0 !important;
-            margin-inline-end: 0 !important;
-  }
-  .ul-drop {
-    text-align: center;
-  }
-  html[dir=rtl] .ul-drop {
-    inset-inline-end: 50%;
-    transform: translateX(-50%);
-  }
-  .li-drop .ul-drop a {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .nav-ul > li {
-    -webkit-margin-end: 12px;
-            margin-inline-end: 12px;
-  }
-  .search-holder-input {
-    width: 220px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .search-holder-input {
-    width: 100%;
-  }
-  .search-section {
-    width: 100%;
-    order: 5;
-    margin-top: 15px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .nav-ul > li a {
-    font-size: 13px;
-  }
 }
 .mainBanner .mainBanner-parent {
   position: relative;
@@ -867,17 +398,18 @@ figure::after {
   .mainBanner .know-btn, .about .know-btn {
     font-size: 13px;
     font-weight: 500;
-    padding: 5px 14px;
+    padding: 5px 0;
     display: block;
-    height: auto;
+    width: 225px;
+    height: 35px;
     margin: 15px auto;
     border-radius: 25px;
   }
   .mainBanner .consult-btn, .about .consult-btn {
     font-size: 13px;
     font-weight: 500;
-    padding: 5px 17px;
-    height: auto;
+    height: 35px;
+    width: 225px;
     border-radius: 25px;
   }
   .banner-desc .consult-btn {
@@ -892,8 +424,6 @@ figure::after {
   }
   .banner-desc h1 {
     font-size: 19px;
-    margin: 0 auto;
-    max-width: 70%;
     line-height: 1.6;
     padding: 0;
   }
@@ -951,7 +481,7 @@ figure::after {
 
 .clients .swiper-pagination-bullet, .news .swiper-pagination-bullet {
   background-color: rgb(0, 0, 0);
-  opacity: 0.502;
+  opacity: 0.3;
 }
 .clients .swiper-pagination-bullet-active, .news .swiper-pagination-bullet-active {
   background-color: #ddb930;
@@ -1049,17 +579,15 @@ figure::after {
   .about-title {
     font-size: 18px;
     margin-bottom: 15px;
-    width: 90%;
     max-width: 100%;
-    font-weight: 500;
+  }
+  .about-item {
+    text-align: center;
   }
   .about-desc {
     font-size: 15px;
     line-height: 1.7;
     margin-bottom: 20px;
-  }
-  .about .know-btn {
-    margin: 15px 0;
   }
   .about .consult-btn {
     -webkit-margin-start: 0;
@@ -1124,7 +652,6 @@ figure::after {
   }
   .vision-title {
     font-size: 18px;
-    font-weight: 500;
   }
   .vision-desc {
     line-height: 1.7;
@@ -1176,7 +703,6 @@ figure::after {
   transition: all linear 0.2s;
   margin-top: 15px;
   display: block;
-  text-transform: capitalize;
   font-size: 16px;
   color: #000000;
   font-weight: 700;
@@ -1508,7 +1034,6 @@ html[dir=ltr] .footer-shape {
   margin-bottom: 0;
   font-size: 14px;
   color: #ffffff;
-  text-transform: capitalize;
   font-weight: 400;
   display: flex;
   justify-content: center;
@@ -1589,10 +1114,6 @@ html[dir=ltr] .footer-shape {
   .message input::placeholder {
     font-size: 13px;
   }
-  .arrow-rotate::after {
-    transform: translateY(-50%) rotate(180deg) !important;
-    top: 10px;
-  }
   .quick-links ul li {
     font-size: 14px;
   }
@@ -1618,6 +1139,10 @@ html[dir=ltr] .footer-shape {
     inset-inline-end: 0;
     top: 0;
   }
+  .arrow-rotate::after {
+    transform: translateY(-50%) rotate(180deg) !important;
+    top: 10px !important;
+  }
 }
 @media only screen and (min-width: 768px) {
   html[dir=ltr] .footer-title {
@@ -1625,5 +1150,468 @@ html[dir=ltr] .footer-shape {
   }
   html[dir=ltr] .quick-links ul li a, html[dir=ltr] .contact ul li a, html[dir=ltr] .newsletter p {
     font-size: 15px;
+  }
+}
+html[dir=ltr] .search-holder input {
+  padding: 0 50px 0 25px;
+}
+
+header {
+  padding: 18px 0px 10px 0;
+  background-color: #fff;
+}
+
+nav {
+  transition: all linear 0.3s;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+}
+.logo img {
+  width: 233px;
+  max-width: 100%;
+}
+
+.consult a, .lang2 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #808080;
+  transition: all linear 0.3s;
+}
+.consult a:hover, .lang2 a:hover {
+  text-decoration: none;
+  color: #ddb930;
+}
+.consult a img, .lang2 a img {
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+}
+
+.closeSearh-btn i {
+  font-size: 25px !important;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-ul li:last-child {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+.nav-ul > li {
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-ul > li a {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+  position: relative;
+}
+.nav-ul > li a:hover {
+  text-decoration: none;
+  color: #ddb930;
+}
+
+html[dir=ltr] .nav-ul > li a {
+  font-size: 15px;
+}
+
+.search-holder-input {
+  position: relative;
+  width: 238px;
+  max-width: 100%;
+  height: 40px;
+}
+
+.li-drop {
+  position: relative;
+  padding: 10px 0;
+  -webkit-margin-end: 30px !important;
+          margin-inline-end: 30px !important;
+}
+.li-drop::after {
+  content: "\f107";
+  font-family: "line Awesome free";
+  font-weight: 900;
+  position: absolute;
+  font-size: 10px;
+  inset-inline-end: 0px;
+  transition: all linear 0.3s;
+}
+.li-drop > a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.li-drop:hover::after {
+  color: #ddb930;
+}
+.li-drop:hover .ul-drop {
+  opacity: 1;
+  visibility: visible;
+}
+.li-drop .ul-drop {
+  opacity: 0.902;
+  width: 206px;
+  border-radius: 3px;
+  background-color: #000000;
+  transition: all linear 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 45px;
+  z-index: 11;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+.li-drop .ul-drop::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #000;
+}
+.li-drop .ul-drop li {
+  border-bottom: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.149);
+  padding: 5px 0;
+}
+.li-drop .ul-drop li a:hover {
+  text-decoration: none;
+}
+.li-drop .ul-drop li:last-child {
+  border-bottom: none;
+}
+.li-drop .ul-drop a {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.openNav-btn {
+  display: none !important;
+  cursor: pointer;
+}
+.openNav-btn i {
+  font-size: 28px;
+  color: #000;
+}
+
+.open-search {
+  top: 0 !important;
+  transition: all linear 0.3s !important;
+}
+
+.closeNav-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.openSearch-btn {
+  cursor: pointer;
+}
+.openSearch-btn i {
+  color: #000;
+  font-size: 23px;
+  transform: scaleX(-1);
+}
+
+.close-search {
+  display: none;
+}
+
+.open-nav {
+  inset-inline-start: -100% !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .ul-drop {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .li-drop::after {
+    top: 14px;
+    inset-inline-end: -13px;
+  }
+  html[dir=ltr] .li-drop::after {
+    top: 16px;
+    inset-inline-end: -12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header-content .consult-btn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+  .logo img {
+    width: 150px;
+    max-width: 100%;
+  }
+  .search-holder {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html[dir=ltr] .nav-ul > li a {
+    font-size: 17px;
+  }
+  .li-drop::after {
+    font-size: 16px;
+  }
+  .lang a {
+    color: #6c6c6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lang a:hover {
+    text-decoration: none;
+  }
+  .lang a img {
+    -webkit-margin-start: 3px;
+            margin-inline-start: 3px;
+  }
+  nav {
+    text-align: center;
+  }
+  .li-drop .ul-drop li {
+    padding-bottom: 0;
+  }
+  nav .consult-btn {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #000000;
+    font-weight: 700;
+    padding: 5px 0;
+    border-radius: 25px;
+    background-color: #ddb930;
+    height: 35px;
+    width: 225px;
+    margin-top: 30px;
+  }
+  .openSearch-btn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  header {
+    padding: 10px 0;
+  }
+  .showSearch-box {
+    display: flex !important;
+  }
+  .icon-rotate::after {
+    transform: rotate(180deg) !important;
+  }
+  html[dir=rtl] .li-drop .ul-drop a {
+    text-align: right;
+  }
+  .li-drop .ul-drop::after {
+    display: none;
+  }
+  .li-drop {
+    flex-direction: column;
+    align-items: flex-start !important;
+    -webkit-margin-end: 0 !important;
+            margin-inline-end: 0 !important;
+    padding: 0;
+  }
+  .li-drop:hover::after {
+    color: #000;
+  }
+  .li-drop a {
+    display: block;
+    width: 100%;
+  }
+  .li-drop a::after {
+    transition: all linear 0.3s;
+    position: absolute;
+    inset-inline-end: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  .li-drop .ul-drop {
+    transition: none;
+    background-color: transparent;
+    padding: 0;
+    min-width: auto;
+    width: 100%;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    padding-top: 5px;
+    display: none;
+  }
+  .li-drop .ul-drop li a {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .logo img {
+    width: 150px;
+    max-width: 100%;
+  }
+  .header-content {
+    position: relative;
+    width: 100%;
+  }
+  .openNav-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content > .consult {
+    display: none;
+  }
+  .banner-overlay {
+    display: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    inset-inline-start: 0%;
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    padding: 19px 22px 0 22px;
+    background-color: #fff;
+  }
+  .nav-ul {
+    flex-direction: column;
+    margin: 70px 0 0 0 !important;
+    align-items: flex-start;
+  }
+  .nav-ul > li {
+    margin-bottom: 20px;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+    width: 100%;
+  }
+  .nav-ul > li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .nav-ul > li a:hover {
+    color: #000;
+  }
+  .nav-ul > li a::after {
+    height: auto;
+  }
+  .closeNav-btn {
+    display: block;
+  }
+  .closeNav-btn i {
+    font-size: 24px;
+    color: #6c6c6c;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .close-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .close-lang-holder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .lang2 a img {
+    -webkit-margin-start: 5px;
+            margin-inline-start: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .closeSearh-btn {
+    display: none !important;
+  }
+  nav .consult-btn {
+    display: none;
+  }
+  .search-section {
+    display: none;
+  }
+  .close-lang-holder {
+    display: none;
+  }
+  .lang2 {
+    display: none;
+  }
+  .openSearch-btn {
+    display: none !important;
+  }
+  .contactus {
+    -webkit-margin-end: 0 !important;
+            margin-inline-end: 0 !important;
+  }
+  .ul-drop {
+    text-align: center;
+  }
+  html[dir=rtl] .ul-drop {
+    inset-inline-end: 50%;
+    transform: translateX(-50%);
+  }
+  .li-drop .ul-drop a {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav-ul > li {
+    -webkit-margin-end: 12px;
+            margin-inline-end: 12px;
+  }
+  .search-holder-input {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .search-holder-input {
+    width: 100%;
+  }
+  .search-section {
+    width: 100%;
+    order: 5;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav-ul > li a {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=main.css.map */

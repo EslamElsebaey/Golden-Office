@@ -102,7 +102,7 @@ html[dir = "ltr"]{
         font-family: "line Awesome free";
         font-weight: 900;
         position: absolute;
-        font-size: 13px;
+        font-size: 10px;
         inset-inline-end: 0px;
         transition: all linear 0.3s;
     }
@@ -209,14 +209,15 @@ html[dir = "ltr"]{
     }
     .li-drop{
         &::after{
-            top: 12px;
-            inset-inline-end: -14px;
+            top: 14px;
+            inset-inline-end: -13px;
         }
     }
     html[dir="ltr"]{
         .li-drop{
             &::after{
-                top: 13px;
+                top: 16px;
+                inset-inline-end: -12px;
             }
         }
     }
@@ -268,14 +269,16 @@ html[dir = "ltr"]{
         padding-bottom: 0;
     }
     nav .consult-btn{
-        font-size: 13px;
+        font-size: 15px;
         text-transform: capitalize;
         color: #000000;
-        font-weight: 500;
-        padding: 5px 15px;
+        font-weight: 700;
+        padding: 5px 0;
         border-radius: 25px;
         background-color: #ddb930;
-        height: auto;
+        height: 35px;
+        width: 225px;
+        margin-top: 30px;
     }
     .openSearch-btn{
         display: flex !important;
@@ -284,7 +287,7 @@ html[dir = "ltr"]{
     }
     
     header{
-        padding: 8px 0;
+        padding: 10px 0;
     }
     
 .showSearch-box{
@@ -370,7 +373,7 @@ html[dir = "ltr"]{
         width: 100%;
         z-index: 99;
         height: 100%;
-        padding: 25px 25px 0 25px;
+        padding: 19px 22px 0 22px;
         background-color: $white-color;
     }
     .nav-ul{
@@ -414,7 +417,7 @@ html[dir = "ltr"]{
 
     .close-lang-holder{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
     }
     .lang2 a img  {

@@ -154,7 +154,6 @@ ul li {
         margin-bottom: 0;
         font-size: 14px;
         color: #ffffff;
-        text-transform: capitalize;
         font-weight: 400;
         display: flex;
         justify-content: center;
@@ -233,11 +232,6 @@ ul li {
             font-size: 13px;
         }
     }
-    .arrow-rotate::after {
-        transform: translateY(-50%) rotate(180deg)  !important;
-        top: 10px;
-    }
-   
     .quick-links ul li{
         font-size: 14px;
     }
@@ -261,11 +255,13 @@ ul li {
             position: absolute;
             inset-inline-end: 0;
             top: 0;
-            
-
-            
         }
     }
+    .arrow-rotate::after {
+        transform: translateY(-50%) rotate(180deg)  !important;
+        top: 10px !important;
+    }
+   
 }
 
 
