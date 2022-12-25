@@ -1,0 +1,388 @@
+// bread crump 
+
+.breadcrumb-sec{
+    background-color: #000;
+    padding: 45px 0;
+    text-align: center;
+    color: #fff;
+}
+.page-head{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    filter: drop-shadow(0 0 10px rgba(5,6,6,0.2));
+}
+.item-home::after{
+    content: " / ";
+    padding: 0 5px;
+    color: #808080;
+}
+.breadcrumb{
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-top: 15px ;
+    margin-bottom: 0;
+   
+}
+.bread-link , .breadcrumb .active{
+    font-size: 14px;
+    color: #808080;
+    font-weight: 400;
+    text-align: center;
+    filter: drop-shadow(0 0 10px rgba(5,6,6,0.2));
+}
+
+//end of  bread crump 
+
+// request form 
+
+.requestForm-sec{
+    background-color: #fff;
+    padding: 60px 0 100px 0;
+}
+
+.request-title{
+    font-size: 22px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Tajawal";
+    text-align: center;
+}
+.myselect{
+    width: 100%;
+}
+.myform{
+    margin-top: 35px;
+    .myLabel {
+        display: block;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+        margin-inline-start: 20px;
+    }.required .myLabel{
+        &::after{
+            content: "*";
+            color: red;
+        }
+    }
+    .myInput {
+        width: 100%;
+        height: 45px;
+        border-radius: 22px;
+        background-color: #f2f2f2;
+        padding: 0 20px;
+        border: none;
+        &:focus{
+            outline: none;
+            border: 1px solid $main-color;
+        }
+    }
+    .mytextarea{
+        border-radius: 22px;
+        background-color: #f2f2f2;
+        width: 100%;
+        border: none;
+        height: 100px !important;
+        resize: none;
+        padding: 10px 20px;
+        &:focus{
+            outline: none;
+            border: 1px solid $main-color;
+        }
+    }
+}
+.general-input{
+    margin-bottom: 18px;
+}
+
+
+.select2-container--default .select2-selection--single{
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 22px;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 45px;
+    padding: 10px 20px;
+}
+.select-general-input{
+    position: relative;
+}
+.select2-selection__arrow{
+    &::after{
+        content: "\f107";
+        font-family: "line Awesome free";
+        font-weight: 900;
+        position: absolute;
+       top: 50%;
+        inset-inline-end: 15px;
+        font-size: 12px;
+        color: #808080;
+    }
+    b{
+        display: none;
+    }
+}
+
+.rotate-select-icon::after{
+    transform: rotate(180deg) !important; 
+}
+.submit-general-input{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.submitBtn{
+    height: 45px;
+    border-radius: 22px;
+    background-color: #ddb930;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    width: 160px;
+    text-align: center;
+    transition: all linear .3s;
+    border: none;
+}
+
+
+@include min-768 {
+    .submitBtn{
+        &:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+@include max-768 {
+    .page-head , .request-title{
+        font-size: 18px;
+    }
+    html[dir="rtl"] {
+        .request-title{
+            line-height: 1.7;
+        }
+    }
+    .requestForm-sec{
+        padding: 50px 0 70px 0;
+    }
+}
+
+@include min-992{
+    .myform{
+        .mycontainer{
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+  
+}
+
+
+// end of request form 
+
+
+
+// *****************************************************************************
+
+// Career 
+
+.careerForm-sec {
+    label:not(.myLabel){
+        font-size: 14px;
+        color: #808080;
+    }
+    padding: 50px 0 100px 0;
+    .myform{
+        margin-top: 0;
+    }
+}
+.careerForm-sec{
+    background-color: #fff;
+    padding: 60px 0 100px 0;
+}
+
+.myradio{
+    margin-inline-start: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.male , .female , .single , .married , .employed , .intern , .unemployed , .yes , .no{
+    margin: 0;
+}
+.male-sec , .single-sec , .employed-sec  , .unemployed-sec , .yes-sec{
+    margin-inline-end: 60px;
+}
+.male-sec , .yes-sec , .no-sec , .single-sec , .female-sec , .married-sec ,.employed-sec  , .unemployed-sec , .intern-sec {
+    display: flex;
+    align-items: center;
+}
+
+.radio-general-input {
+    margin-bottom: 25px;
+    .myLabel{
+        margin-bottom: 15px;
+    }
+    input[type="radio"] {
+        margin-inline-end: 7px;
+        appearance: none;
+        width:15px;
+        height: 15px;
+        border: 2px solid #f2f2f2 ;
+        border-radius: 50%;
+        background-clip: content-box;
+        padding: 1.5px;
+    }
+    input[type="radio"]:checked {
+        background-color: $main-color;
+    }
+}
+input[type="file"]{
+    width: 100%;
+    width: 100%;
+    height: 45px;
+    border-radius: 22px;
+    background-color: #f2f2f2;
+    border: none;
+    position: relative;
+    color: transparent;
+    width: 100%;
+}
+.add-file{
+    position: absolute;
+    width: 103px;
+    color: white;
+    overflow: hidden;
+    top: 50%;
+    border: none;
+     transform: translateY(-50%); 
+    inset-inline-end: 7px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #a6a6a6;
+    cursor: pointer;
+}
+.file-general-input{
+    margin-bottom: 23px;
+}
+.myinput-holder{
+    position: relative;
+}
+::-webkit-file-upload-button{
+    display: none;
+}
+
+.date-general-input{
+    .myInput{
+        &::-webkit-input-placeholder{
+            font-size: 14px;
+            color: #808080;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button{
+    display: none;
+}
+.add-certificate{
+    font-size: 14px;
+color: #808080;
+font-weight: 500;
+margin-inline-start: 20px;
+margin-top: 10px;
+display: block;
+&:hover{
+    text-decoration: none;
+    color: #808080;
+}
+}
+
+.calender{
+position: absolute;
+    font-size: 20px;
+    color: #808080;
+    inset-inline-end: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    pointer-events: none;
+}
+// 
+
+// checkbox
+.mycheckbox{
+    display: flex;
+    margin-inline-start: 20px;
+}
+.checkmark{
+    width: 16px;
+    height: 16px;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    position: relative;
+    margin-inline-end: 8px;
+    display: inline-block;
+    &::after{
+        content: "";
+        position: absolute;
+        display: none;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 5px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+    }
+    
+}
+.lang-div{
+    margin-inline-end: 35px;
+    
+ input:checked ~ .checkmark:after {
+    display: block;
+  }
+}
+.lang-div{
+    label{
+        display: flex;
+        align-items: center;
+    }
+    input{
+        opacity: 0;
+        appearance: none;
+        &:checked + .checkmark{
+            background-color: $main-color;
+        }
+    }
+}
+
+
+@include max-768 {
+    .mycheckbox{
+        flex-direction: column;
+    }
+    .lang-div{
+        margin-inline-end: 0;
+    }
+    .radio-general-input{
+        margin-bottom: 18px;
+    }
+    .employed , .unemployed , .intern{
+            font-size: 14px;
+        }
+        .male-sec, .single-sec, .employed-sec, .unemployed-sec, .yes-sec{
+            margin-inline-end: 30px;
+        }
+        .general-input{
+            margin-bottom: 22px;
+        }
+}
+

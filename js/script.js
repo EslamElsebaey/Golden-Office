@@ -42,11 +42,34 @@ $(document).ready(function(){
 /************************************************************************ */
 
 // select to 
-  // $('.myselect').select2();
-  $(".myselect").select2({
+// fire  select
+  $('.myselect').select2();
+
+  
+  // customize search in service select
+  $(".service-select").select2({
     minimumResultsForSearch: Infinity
 });
 
+
+// trigger file button 
+
+$(".add-file").click(function(e){
+  e.preventDefault() ;
+ $(this).siblings("input[type='file'").click()
+  //  $(this).parent().click() ;
+})
+
+
+// date picker 
+$(".dateInput").flatpickr({
+    enableTime: false,
+    dateFormat: "Y-m-d H:i",
+});
+
+
+
+// ****************************************************
 $(".select2").click(function(){
  $(".select2-selection__arrow").toggleClass("rotate-select-icon")
 })
@@ -190,6 +213,8 @@ $(".openNav-btn").click(function(){
 $(".closeNav-btn").click(function(){
   $("nav").addClass("open-nav");
   $("body").css("overflow" , "visible") ;
+  $(".ul-drop").slideUp(300);
+  $(".li-drop").removeClass("icon-rotate");
 })
 
 /************************************************************************ */

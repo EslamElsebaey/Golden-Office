@@ -1057,6 +1057,213 @@ html[dir=ltr] .news-item .news-item-desc p {
     margin: auto;
   }
 }
+.careerForm-sec {
+  padding: 50px 0 100px 0;
+}
+.careerForm-sec label:not(.myLabel) {
+  font-size: 14px;
+  color: #808080;
+}
+.careerForm-sec .myform {
+  margin-top: 0;
+}
+
+.careerForm-sec {
+  background-color: #fff;
+  padding: 60px 0 100px 0;
+}
+
+.myradio {
+  -webkit-margin-start: 25px;
+          margin-inline-start: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.male, .female, .single, .married, .employed, .intern, .unemployed, .yes, .no {
+  margin: 0;
+}
+
+.male-sec, .single-sec, .employed-sec, .unemployed-sec, .yes-sec {
+  -webkit-margin-end: 60px;
+          margin-inline-end: 60px;
+}
+
+.male-sec, .yes-sec, .no-sec, .single-sec, .female-sec, .married-sec, .employed-sec, .unemployed-sec, .intern-sec {
+  display: flex;
+  align-items: center;
+}
+
+.radio-general-input {
+  margin-bottom: 25px;
+}
+.radio-general-input .myLabel {
+  margin-bottom: 15px;
+}
+.radio-general-input input[type=radio] {
+  -webkit-margin-end: 7px;
+          margin-inline-end: 7px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #f2f2f2;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 1.5px;
+}
+.radio-general-input input[type=radio]:checked {
+  background-color: #ddb930;
+}
+
+input[type=file] {
+  width: 100%;
+  width: 100%;
+  height: 45px;
+  border-radius: 22px;
+  background-color: #f2f2f2;
+  border: none;
+  position: relative;
+  color: transparent;
+  width: 100%;
+}
+
+.add-file {
+  position: absolute;
+  width: 103px;
+  color: white;
+  overflow: hidden;
+  top: 50%;
+  border: none;
+  transform: translateY(-50%);
+  inset-inline-end: 7px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #a6a6a6;
+  cursor: pointer;
+}
+
+.file-general-input {
+  margin-bottom: 23px;
+}
+
+.myinput-holder {
+  position: relative;
+}
+
+::-webkit-file-upload-button {
+  display: none;
+}
+
+.date-general-input .myInput::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #808080;
+  font-weight: 500;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  display: none;
+}
+
+.add-certificate {
+  font-size: 14px;
+  color: #808080;
+  font-weight: 500;
+  -webkit-margin-start: 20px;
+          margin-inline-start: 20px;
+  margin-top: 10px;
+  display: block;
+}
+.add-certificate:hover {
+  text-decoration: none;
+  color: #808080;
+}
+
+.calender {
+  position: absolute;
+  font-size: 20px;
+  color: #808080;
+  inset-inline-end: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.mycheckbox {
+  display: flex;
+  -webkit-margin-start: 20px;
+          margin-inline-start: 20px;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  position: relative;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+  display: inline-block;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
+.lang-div {
+  -webkit-margin-end: 35px;
+          margin-inline-end: 35px;
+}
+.lang-div input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.lang-div label {
+  display: flex;
+  align-items: center;
+}
+.lang-div input {
+  opacity: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.lang-div input:checked + .checkmark {
+  background-color: #ddb930;
+}
+
+@media only screen and (max-width: 767px) {
+  .mycheckbox {
+    flex-direction: column;
+  }
+  .lang-div {
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+  }
+  .radio-general-input {
+    margin-bottom: 18px;
+  }
+  .employed, .unemployed, .intern {
+    font-size: 14px;
+  }
+  .male-sec, .single-sec, .employed-sec, .unemployed-sec, .yes-sec {
+    -webkit-margin-end: 30px;
+            margin-inline-end: 30px;
+  }
+  .general-input {
+    margin-bottom: 22px;
+  }
+}
 html[dir=ltr] .message input {
   padding: 0 50px 0 25px;
 }
