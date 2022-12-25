@@ -66,7 +66,6 @@ html[dir=ltr] body {
   }
 }
 .title {
-  text-transform: capitalize;
   margin-bottom: 30px;
   text-align: center;
   font-size: 24px;
@@ -259,6 +258,9 @@ img {
   height: 100%;
   z-index: 3;
 }
+.mainBanner .mainslider-item {
+  text-align: center;
+}
 .mainBanner figure {
   width: 100%;
 }
@@ -396,8 +398,7 @@ figure::after {
 }
 @media only screen and (max-width: 767px) {
   .mainBanner .know-btn, .about .know-btn {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 14px;
     padding: 5px 0;
     display: block;
     width: 225px;
@@ -406,8 +407,7 @@ figure::after {
     border-radius: 25px;
   }
   .mainBanner .consult-btn, .about .consult-btn {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 14px;
     height: 35px;
     width: 225px;
     border-radius: 25px;
@@ -729,7 +729,6 @@ figure::after {
     font-size: 15px;
     margin-top: 8px;
     margin-bottom: 0px;
-    font-weight: 500;
   }
   .services-col:last-child .service-type span {
     margin-bottom: 0;

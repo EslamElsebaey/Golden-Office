@@ -5,6 +5,9 @@
     height: 100%;
     z-index: 3;
    }
+   .mainslider-item{
+    text-align: center;
+   }
    figure {
     width: 100%;
    }
@@ -152,8 +155,7 @@ figure::after{
 
     .mainBanner , .about {
         .know-btn{
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 14px;
             padding: 5px 0;
             display: block;
             width: 225px;
@@ -162,9 +164,7 @@ figure::after{
             border-radius: 25px;
         }
         .consult-btn{
-            font-size: 13px;
-            font-weight: 500;
-            // padding: 5px 0;
+            font-size: 14px;
             height: 35px;
              width: 225px;
             border-radius: 25px;
