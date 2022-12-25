@@ -41,7 +41,15 @@ $(document).ready(function(){
 
 /************************************************************************ */
 
+// select to 
+  // $('.myselect').select2();
+  $(".myselect").select2({
+    minimumResultsForSearch: Infinity
+});
 
+$(".select2").click(function(){
+ $(".select2-selection__arrow").toggleClass("rotate-select-icon")
+})
 
 
 // main swiper
