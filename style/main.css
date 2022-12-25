@@ -571,8 +571,8 @@ figure::after {
 }
 @media only screen and (min-width: 768px) {
   .about .know-btn:hover {
-    background-color: #ddb930;
-    border-color: #ddb930;
+    background-color: #000;
+    color: #fff;
   }
 }
 @media only screen and (max-width: 767px) {

@@ -64,8 +64,9 @@
 @include min-768 {
     .about .know-btn {
         &:hover{
-            background-color: $main-color;
-            border-color: $main-color;
+            background-color: #000;
+            color: #fff;
+            // border-color: $main-color;
         }
     }
 }
