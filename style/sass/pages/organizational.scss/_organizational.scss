@@ -1,0 +1,138 @@
+.organization{
+    padding: 55px 0 100px 50px;
+    height: 700px;
+}
+.organization-parent{
+    position: relative;
+}
+
+.general-style{
+    border-radius: 25px;
+    font-size: 18px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin: auto;
+    position: relative;
+    border-radius: 22px;
+}
+
+.general-manager{
+    height: 50px;
+    background-color: $main-color;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 25px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #e6e6e6;
+        height: 50px;
+        bottom: -50px;
+    }
+}
+.vice-presedent {
+height: 43px;
+background-color: rgba(221,185,48,0);
+border: 2px solid #000000;
+color: #000000;
+margin-top: 50px;
+&::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #e6e6e6;
+    bottom: -114px;
+    height: 112px;
+    inset-inline-end: 101px;
+}
+&::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #e6e6e6;
+    bottom: -230px;
+    height: 228px;
+    inset-inline-start: 100px;
+}
+}
+.financial-director{
+    background-color: #000000;
+    color: #fff;
+    height: 43px;
+    margin-bottom: 15px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 43px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background-color: #e6e6e6;
+        inset-inline-start: -43px;
+    }
+}
+.financial-holder{
+    position: absolute;
+    inset-inline-end: 152px;
+    top: 175px;
+}
+.financial-director:nth-of-type(2){
+   &::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 170px;
+    background-color: #e6e6e6;
+    inset-inline-start: 37px;
+    top: 43px;
+   }
+}
+
+.financial-branches{
+    position: absolute;
+    top: 308px;
+    inset-inline-end: 71px;
+}
+.financial-branch{
+    height: 43px;
+    background-color: #e6e6e6;
+    color: #000000;
+    margin-bottom: 15px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 43px;
+        height: 2px;
+        background-color: #e6e6e6;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -43px;
+    }
+}
+
+.sector-managers{
+    position: absolute;
+    right: 149px;
+    top: 175px;
+}
+
+.sector-manager{
+    background-color: #000000;
+    color: #fff;
+    margin-bottom: 15px;
+    height: 43px;
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: #e6e6e6;
+        width: 43px;
+        height: 2px;
+        left: -43px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

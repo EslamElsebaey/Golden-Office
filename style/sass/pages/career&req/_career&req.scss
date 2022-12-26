@@ -34,6 +34,12 @@
     text-align: center;
     filter: drop-shadow(0 0 10px rgba(5,6,6,0.2));
 }
+.bread-link{
+    &:hover{
+        text-decoration: none;
+        color: #808080;
+    }
+}
 
 //end of  bread crump 
 
@@ -303,6 +309,9 @@ display: block;
     color: #808080;
 }
 }
+.select2{
+    width: 100% !important;
+}
 
 .calender{
 position: absolute;
@@ -367,10 +376,12 @@ position: absolute;
 
 @include max-768 {
     .mycheckbox{
-        flex-direction: column;
+       flex-wrap: wrap;
     }
     .lang-div{
-        margin-inline-end: 0;
+        min-width: 100px;
+        margin-inline-end: 25px;
+        margin-bottom: 5px;
     }
     .radio-general-input{
         margin-bottom: 18px;

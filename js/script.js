@@ -62,6 +62,7 @@ $(".add-file").click(function(e){
 
 
 // date picker 
+
 $(".dateInput").flatpickr({
     enableTime: false,
     dateFormat: "Y-m-d H:i",

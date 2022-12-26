@@ -922,6 +922,11 @@ html[dir=ltr] .news-item .news-item-desc p {
   filter: drop-shadow(0 0 10px rgba(5, 6, 6, 0.2));
 }
 
+.bread-link:hover {
+  text-decoration: none;
+  color: #808080;
+}
+
 .requestForm-sec {
   background-color: #fff;
   padding: 60px 0 100px 0;
@@ -1180,6 +1185,10 @@ input[type=file] {
   color: #808080;
 }
 
+.select2 {
+  width: 100% !important;
+}
+
 .calender {
   position: absolute;
   font-size: 20px;
@@ -1244,11 +1253,13 @@ input[type=file] {
 
 @media only screen and (max-width: 767px) {
   .mycheckbox {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .lang-div {
-    -webkit-margin-end: 0;
-            margin-inline-end: 0;
+    min-width: 100px;
+    -webkit-margin-end: 25px;
+            margin-inline-end: 25px;
+    margin-bottom: 5px;
   }
   .radio-general-input {
     margin-bottom: 18px;
@@ -1264,6 +1275,149 @@ input[type=file] {
     margin-bottom: 22px;
   }
 }
+.organization {
+  padding: 55px 0 100px 50px;
+  height: 700px;
+}
+
+.organization-parent {
+  position: relative;
+}
+
+.general-style {
+  border-radius: 25px;
+  font-size: 18px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  margin: auto;
+  position: relative;
+  border-radius: 22px;
+}
+
+.general-manager {
+  height: 50px;
+  background-color: #ddb930;
+  color: #000000;
+  font-weight: 700;
+  border-radius: 25px;
+}
+.general-manager::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #e6e6e6;
+  height: 50px;
+  bottom: -50px;
+}
+
+.vice-presedent {
+  height: 43px;
+  background-color: rgba(221, 185, 48, 0);
+  border: 2px solid #000000;
+  color: #000000;
+  margin-top: 50px;
+}
+.vice-presedent::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #e6e6e6;
+  bottom: -114px;
+  height: 112px;
+  inset-inline-end: 101px;
+}
+.vice-presedent::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #e6e6e6;
+  bottom: -230px;
+  height: 228px;
+  inset-inline-start: 100px;
+}
+
+.financial-director {
+  background-color: #000000;
+  color: #fff;
+  height: 43px;
+  margin-bottom: 15px;
+}
+.financial-director::after {
+  content: "";
+  position: absolute;
+  width: 43px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #e6e6e6;
+  inset-inline-start: -43px;
+}
+
+.financial-holder {
+  position: absolute;
+  inset-inline-end: 152px;
+  top: 175px;
+}
+
+.financial-director:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 170px;
+  background-color: #e6e6e6;
+  inset-inline-start: 37px;
+  top: 43px;
+}
+
+.financial-branches {
+  position: absolute;
+  top: 308px;
+  inset-inline-end: 71px;
+}
+
+.financial-branch {
+  height: 43px;
+  background-color: #e6e6e6;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.financial-branch::after {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 2px;
+  background-color: #e6e6e6;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -43px;
+}
+
+.sector-managers {
+  position: absolute;
+  right: 149px;
+  top: 175px;
+}
+
+.sector-manager {
+  background-color: #000000;
+  color: #fff;
+  margin-bottom: 15px;
+  height: 43px;
+}
+.sector-manager::after {
+  content: "";
+  position: absolute;
+  background-color: #e6e6e6;
+  width: 43px;
+  height: 2px;
+  left: -43px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 html[dir=ltr] .message input {
   padding: 0 50px 0 25px;
 }
@@ -1311,7 +1465,8 @@ html[dir=ltr] .footer-shape {
 
 .quick-drop {
   display: flex;
-  height: 150px;
+  min-height: 165px;
+  max-height: 170px;
   flex-direction: column;
   flex-wrap: wrap;
 }
