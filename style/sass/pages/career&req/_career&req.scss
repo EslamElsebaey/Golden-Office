@@ -260,6 +260,9 @@ input[type="file"]{
     width: 100%;
 }
 .add-file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 103px;
     color: white;
@@ -386,7 +389,7 @@ position: absolute;
     .lang-div{
         min-width: 100px;
         margin-inline-end: 25px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     .radio-general-input{
         margin-bottom: 18px;
@@ -403,6 +406,9 @@ position: absolute;
         .employed-sec, .unemployed-sec{
             margin-bottom: 13px;
             margin-inline-end: 0;
+        }
+        .french-sec , .german-sec , .french-label , .german-label{
+            margin-bottom: 0;
         }
 }
 

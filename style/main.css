@@ -1135,6 +1135,9 @@ input[type=file] {
 }
 
 .add-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 103px;
   color: white;
@@ -1264,7 +1267,7 @@ input[type=file] {
     min-width: 100px;
     -webkit-margin-end: 25px;
             margin-inline-end: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .radio-general-input {
     margin-bottom: 18px;
@@ -1283,6 +1286,9 @@ input[type=file] {
     margin-bottom: 13px;
     -webkit-margin-end: 0;
             margin-inline-end: 0;
+  }
+  .french-sec, .german-sec, .french-label, .german-label {
+    margin-bottom: 0;
   }
 }
 .organization {
@@ -1786,6 +1792,7 @@ html[dir=ltr] .footer-shape {
   }
   .quick-links ul li {
     font-size: 14px;
+    line-height: 34px;
   }
   .contact ul li a {
     font-size: 14px;
