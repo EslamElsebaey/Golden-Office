@@ -60,6 +60,19 @@ a:hover{
         margin-top: 8px;
         margin-bottom: 0px;
     }
+    .services-col:hover{
+        span{
+            color: #000;
+        }
+    }
+    .service-type{
+        &:hover{
+            span{
+                color: #000;
+                
+            }
+        }
+    }
     .services-col:last-child .service-type span{
         margin-bottom: 0;
     }
