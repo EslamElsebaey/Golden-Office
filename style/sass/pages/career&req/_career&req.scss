@@ -375,6 +375,11 @@ position: absolute;
 
 
 @include max-768 {
+    .myradio-work{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     .mycheckbox{
        flex-wrap: wrap;
     }
@@ -389,11 +394,15 @@ position: absolute;
     .employed , .unemployed , .intern{
             font-size: 14px;
         }
-        .male-sec, .single-sec, .employed-sec, .unemployed-sec, .yes-sec{
+        .male-sec, .single-sec, .yes-sec{
             margin-inline-end: 30px;
         }
         .general-input{
             margin-bottom: 22px;
+        }
+        .employed-sec, .unemployed-sec{
+            margin-bottom: 13px;
+            margin-inline-end: 0;
         }
 }
 
