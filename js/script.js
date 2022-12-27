@@ -68,6 +68,21 @@ $(".dateInput").flatpickr({
     dateFormat: "Y-m-d H:i",
 });
 
+// ***********************************************clientsSwiper
+// nested organizational structure
+
+$(".financial-director-nested").click(function(){
+  $(".financial-branches").slideToggle(300);
+  $(this).children(".plus-icon").toggleClass("la-minus");
+  $(this).children(".plus-icon").toggleClass("la-plus");
+})
+
+
+$(".sector-manager-nested").click(function(){
+  $(".sector-branches").slideToggle(300);
+  $(this).children(".plus-icon").toggleClass("la-minus");
+  $(this).children(".plus-icon").toggleClass("la-plus");
+})
 
 
 // ****************************************************

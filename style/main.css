@@ -177,7 +177,7 @@ img {
     padding-left: 20px;
   }
   .title {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 35px;
   }
   html[dir=ltr] .message input {
@@ -986,7 +986,7 @@ html[dir=ltr] .news-item .news-item-desc p {
 }
 
 .general-input {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .select2-container--default .select2-selection--single {
@@ -1079,8 +1079,8 @@ html[dir=ltr] .news-item .news-item-desc p {
 }
 
 .myradio {
-  -webkit-margin-start: 25px;
-          margin-inline-start: 25px;
+  -webkit-margin-start: 20px;
+          margin-inline-start: 20px;
   display: flex;
   align-items: center;
 }
@@ -1276,12 +1276,13 @@ input[type=file] {
   }
 }
 .organization {
-  padding: 55px 0 100px 50px;
+  padding: 55px 0 0 0px;
   height: 700px;
 }
 
 .organization-parent {
   position: relative;
+  height: 700px;
 }
 
 .general-style {
@@ -1309,8 +1310,8 @@ input[type=file] {
   position: absolute;
   width: 2px;
   background-color: #e6e6e6;
-  height: 50px;
-  bottom: -50px;
+  height: 30px;
+  bottom: -30px;
 }
 
 .vice-presedent {
@@ -1318,7 +1319,7 @@ input[type=file] {
   background-color: rgba(221, 185, 48, 0);
   border: 2px solid #000000;
   color: #000000;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .vice-presedent::after {
   content: "";
@@ -1327,7 +1328,7 @@ input[type=file] {
   background-color: #e6e6e6;
   bottom: -114px;
   height: 112px;
-  inset-inline-end: 101px;
+  inset-inline-end: 110px;
 }
 .vice-presedent::before {
   content: "";
@@ -1336,7 +1337,7 @@ input[type=file] {
   background-color: #e6e6e6;
   bottom: -230px;
   height: 228px;
-  inset-inline-start: 100px;
+  inset-inline-start: 116px;
 }
 
 .financial-director {
@@ -1358,8 +1359,8 @@ input[type=file] {
 
 .financial-holder {
   position: absolute;
-  inset-inline-end: 152px;
-  top: 175px;
+  inset-inline-end: 160px;
+  top: 154px;
 }
 
 .financial-director:nth-of-type(2)::before {
@@ -1368,14 +1369,14 @@ input[type=file] {
   width: 2px;
   height: 170px;
   background-color: #e6e6e6;
-  inset-inline-start: 37px;
+  inset-inline-start: 29px;
   top: 43px;
 }
 
 .financial-branches {
   position: absolute;
-  top: 308px;
-  inset-inline-end: 71px;
+  top: 288px;
+  inset-inline-end: 88px;
 }
 
 .financial-branch {
@@ -1392,13 +1393,13 @@ input[type=file] {
   background-color: #e6e6e6;
   top: 50%;
   transform: translateY(-50%);
-  right: -43px;
+  inset-inline-start: -43px;
 }
 
 .sector-managers {
   position: absolute;
-  right: 149px;
-  top: 175px;
+  inset-inline-start: 167px;
+  top: 154px;
 }
 
 .sector-manager {
@@ -1413,11 +1414,131 @@ input[type=file] {
   background-color: #e6e6e6;
   width: 43px;
   height: 2px;
-  left: -43px;
+  inset-inline-end: -43px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.sector-branches {
+  position: absolute;
+  bottom: 181px;
+  inset-inline-start: 94px;
+}
+
+.sector-branch {
+  background-color: #e6e6e6;
+  color: #000000;
+  height: 43px;
+  margin-bottom: 15px;
+}
+.sector-branch::after {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 2px;
+  background-color: #e6e6e6;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: -43px;
+}
+
+.sector-manager:nth-of-type(4) {
+  position: relative;
+}
+.sector-manager:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 43px;
+  width: 2px;
+  height: 112px;
+  background-color: #e6e6e6;
+  inset-inline-end: 29px;
+}
+
+.plus-icon {
+  display: inline-block;
+  -webkit-margin-start: 5px;
+          margin-inline-start: 5px;
+  font-size: 20px;
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .general-style {
+    width: 250px;
+    font-size: 16px;
+  }
+  .vice-presedent::before {
+    inset-inline-start: 80px;
+  }
+  .vice-presedent::after {
+    inset-inline-end: 89px;
+  }
+  .sector-managers {
+    inset-inline-start: 131px;
+  }
+  .sector-branches {
+    inset-inline-start: 58px;
+  }
+  .financial-holder {
+    inset-inline-end: 140px;
+  }
+  .financial-branches {
+    inset-inline-end: 68px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .organization {
+    padding: 50px 0;
+  }
+  .financial-branches {
+    padding-bottom: 20px;
+  }
+  .financial-director-nested, .sector-manager-nested {
+    cursor: pointer;
+  }
+  .financial-holder, .financial-branches, .sector-managers, .sector-branches {
+    position: static;
+  }
+  .organization-parent, .organization {
+    height: auto;
+  }
+  .general-style {
+    width: 320px;
+    margin-bottom: 20px;
+  }
+  .general-style::after {
+    display: none;
+  }
+  .general-style::before {
+    display: none;
+  }
+  .vice-presedent {
+    margin-bottom: 30px;
+  }
+  .plus-icon {
+    display: inline-block;
+  }
+  .financial-branches, .sector-branches {
+    display: none;
+  }
+  .general-manager {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .general-style {
+    width: 260px;
+    max-width: 100%;
+  }
+  .general-manager {
+    font-size: 18px;
+  }
+  .vice-presedent {
+    font-size: 17px;
+  }
+}
 html[dir=ltr] .message input {
   padding: 0 50px 0 25px;
 }
@@ -1465,7 +1586,7 @@ html[dir=ltr] .footer-shape {
 
 .quick-drop {
   display: flex;
-  min-height: 165px;
+  height: 165px;
   max-height: 170px;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1594,6 +1715,10 @@ html[dir=ltr] .footer-shape {
   .footer-shape {
     display: none;
   }
+  .quick-drop {
+    height: 210px;
+    max-height: none;
+  }
 }
 @media only screen and (max-width: 767px) {
   .about, .vision, .services, .news, .clients {
@@ -1604,6 +1729,7 @@ html[dir=ltr] .footer-shape {
   }
   .quick-drop {
     height: auto;
+    max-height: none;
   }
   .copyright {
     display: block;
@@ -2044,11 +2170,11 @@ html[dir=ltr] .nav-ul > li a {
   }
   .nav-ul {
     flex-direction: column;
-    margin: 70px 0 0 0 !important;
+    margin: 30px 0 0 0 !important;
     align-items: flex-start;
   }
   .nav-ul > li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     -webkit-margin-end: 0;
             margin-inline-end: 0;
     width: 100%;

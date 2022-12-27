@@ -51,7 +51,7 @@ ul li {
 }
 .quick-drop{
     display: flex;
-    min-height: 165px;
+    height: 165px;
     max-height: 170px;
     flex-direction: column;
     flex-wrap: wrap;
@@ -181,6 +181,10 @@ ul li {
     .footer-shape{
         display: none;
     }
+    .quick-drop{
+        height: 210px;
+        max-height: none;
+    }
 }
 
 
@@ -193,6 +197,7 @@ ul li {
       }
     .quick-drop{
         height: auto;
+        max-height: none;
     }
     .copyright{
         display: block;

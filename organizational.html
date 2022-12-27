@@ -20,7 +20,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="style/main.css" />
-  <title>التوظيف</title>
+  <title>ألهيكل التنظيمى</title>
 </head>
 
 <body>
@@ -121,7 +121,11 @@
 <!-- end of breadcrump  -->
 
 
-<div class="organization">
+
+<!-- organization structure  -->
+
+
+<div class="organization fadeInDown wow">
     <div class="container">
         <div class="organization-parent">
             <div class="general-manager general-style">
@@ -134,8 +138,8 @@
                 <div class="financial-director general-style">
                 المدير المالى و الادارى
                 </div>
-                <div class="financial-director general-style">
-                نائب المدير المالى و الادارى
+                <div class="financial-director financial-director-nested  general-style">
+                   نائب المدير المالى و الادارى <i class="las plus-icon la-plus"></i>
                 </div>
             </div>
             <div class="financial-branches">
@@ -159,14 +163,24 @@
                 <div class="sector-manager general-style">
                   مدير تنسيق المشاريع
                 </div>
-                <div class="sector-manager general-style">
-                  المدير الفنى
+                <div class="sector-manager sector-manager-nested general-style">
+                  المدير الفنى <i class="las plus-icon la-plus"></i>
                 </div>
             </div>
-            
+            <div class="sector-branches">
+                <div class="sector-branch general-style">
+                    مدير تنسيق المشاريع
+                  </div>
+                  <div class="sector-branch general-style">
+                    المدير الفنى
+                  </div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- end of organization structure  -->
+
 
 
 
@@ -204,13 +218,13 @@
               <a href="#">  عملاؤنا</a>
             </li>
             <li>
-              <a href="#">  طلب استشارة / دراسة جدوى</a>
+              <a href="request.html">  طلب استشارة / دراسة جدوى</a>
             </li>
             <li>
               <a href="#">  الأخبار</a>
             </li>
             <li>
-              <a href="#">  التوظيف</a>
+              <a href="career.html">  التوظيف</a>
             </li>
             <li>
               <a href="#">  اتصل بنا</a>
