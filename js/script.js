@@ -66,6 +66,7 @@ $(".add-file").click(function(e){
 $(".dateInput").flatpickr({
     enableTime: false,
     dateFormat: "Y-m-d H:i",
+    disableMobile : "true"
 });
 
 // ***********************************************clientsSwiper

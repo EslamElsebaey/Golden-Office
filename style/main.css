@@ -1056,6 +1056,9 @@ html[dir=ltr] .news-item .news-item-desc p {
   }
 }
 @media only screen and (max-width: 767px) {
+  .breadcrumb-sec {
+    padding: 20px 0;
+  }
   .page-head, .request-title {
     font-size: 18px;
   }
@@ -1210,7 +1213,6 @@ input[type=file] {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  pointer-events: none;
 }
 
 .mycheckbox {
@@ -1265,6 +1267,9 @@ input[type=file] {
 }
 
 @media only screen and (max-width: 767px) {
+  .careerForm-sec {
+    padding: 30px 0 100px 0;
+  }
   .myradio-work {
     flex-direction: column;
     align-items: flex-start;
@@ -1484,8 +1489,8 @@ input[type=file] {
 
 .plus-icon {
   display: inline-block;
-  -webkit-margin-start: 5px;
-          margin-inline-start: 5px;
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
   font-size: 20px;
   display: none;
 }
@@ -1555,7 +1560,7 @@ input[type=file] {
 }
 @media only screen and (max-width: 767px) {
   .general-style {
-    width: 260px;
+    width: 335px;
     max-width: 100%;
   }
   .general-manager {
