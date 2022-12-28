@@ -106,7 +106,9 @@ const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
 const newsSwiper = new Swiper(' .news .swiper', {
   loop: true,
   autoplay: true,
- 
+ autoplay : {
+  delay : 3500
+ } ,
   pagination: {
     el: '.news-parent .swiper-pagination',
     clickable: true,
@@ -173,16 +175,6 @@ const clientsSwiper = new Swiper('.clients .swiper', {
 
 
 
-// open and close sideBar
-
-$(".openNav-btn").click(function(){
-  $("nav").removeClass("open-nav");
-  $("body").css("overflow" , "hidden") ;
-})
-$(".closeNav-btn").click(function(){
-  $("nav").addClass("open-nav");
-  $("body").css("overflow" , "visible") ;
-})
 
 /* ******************************************************************************** */
  
