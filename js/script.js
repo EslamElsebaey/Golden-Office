@@ -9,37 +9,8 @@ $(document).ready(function(){
   })
   $("body").css("overflow" , "visible")
 
-//fixed nav
 
-//   //~~~~~~~~~ fixed header
-//  if ($(window).width() < 768) {
-//     //~~~~~~~~~ fixed header
-//     $(window).on("scroll", function () {
-//       if ($(window).scrollTop() > 150) {
-//         $("header").addClass("fixed");
-//         // $(".openNav-btn i").css("color" , "#519356");
-//         $(".logo img").css("filter" , " brightness(0) saturate(100%) invert(49%) sepia(13%) saturate(1424%) hue-rotate(74deg) brightness(101%) contrast(88%)")
-//       } else {
-//         $("header").removeClass("fixed");
-//         // $(".openNav-btn i").css("color" , "#fff");
-//         $(".logo img").css("filter" , "none") ;
-//       }
-//     });
-//     var fixedBar = document.querySelector("header"),
-//       prevScrollpos = $(window).scrollTop();
-
-//     (window.onscroll = function () {
-//       var o = $(window).scrollTop();
-//       prevScrollpos < o && prevScrollpos > 0
-//         ? fixedBar.classList.add("fixsedt")
-//         : fixedBar.classList.remove("fixsedt"),
-//         (prevScrollpos = o);
-//     })   
-//   }
- 
-
-
-/************************************************************************ */
+/* ******************************************************************************** */
 
 // select to 
 // fire  select
@@ -51,6 +22,8 @@ $(document).ready(function(){
     minimumResultsForSearch: Infinity
 });
 
+/* ******************************************************************************** */
+
 
 // trigger file button 
 
@@ -60,6 +33,9 @@ $(".add-file").click(function(e){
   //  $(this).parent().click() ;
 })
 
+/* ******************************************************************************** */
+
+
 
 // date picker 
 
@@ -68,8 +44,9 @@ $(".dateInput").flatpickr({
     dateFormat: "Y-m-d H:i",
     disableMobile : "true"
 });
+/* ******************************************************************************** */
 
-// ***********************************************clientsSwiper
+
 // nested organizational structure
 
 $(".financial-director-nested").click(function(){
@@ -78,6 +55,9 @@ $(".financial-director-nested").click(function(){
   $(this).children(".plus-icon").toggleClass("la-plus");
 })
 
+/* ******************************************************************************** */
+
+// organizational  nested 
 
 $(".sector-manager-nested").click(function(){
   $(".sector-branches").slideToggle(300);
@@ -85,19 +65,21 @@ $(".sector-manager-nested").click(function(){
   $(this).children(".plus-icon").toggleClass("la-plus");
 })
 
+// select arrow rotate
 
-// ****************************************************
 $(".select2").click(function(){
  $(".select2-selection__arrow").toggleClass("rotate-select-icon")
 })
 
+
+/* ******************************************************************************** */
 
 // main swiper
 
 const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
   loop: true,
   draggable: true,
-  // autoplay: true,
+  autoplay: true,
   navigation: {
     nextEl: ' .mainBanner .swiper-button-next',
     prevEl: '.mainBanner .swiper-button-prev',
@@ -118,12 +100,12 @@ const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
   }
 });
 
-/************************************************************************ */
+/* ******************************************************************************** */
 
 // news swiper
 const newsSwiper = new Swiper(' .news .swiper', {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
  
   pagination: {
     el: '.news-parent .swiper-pagination',
@@ -145,13 +127,13 @@ const newsSwiper = new Swiper(' .news .swiper', {
   }
 });
 
-/************************************************************************ */
+/* ******************************************************************************** */
 
 
 // clients swiper
 const clientsSwiper = new Swiper('.clients .swiper', {
   loop: true,
-  // autoplay : true ,
+  autoplay : true ,
   pagination: {
     el: '.clients .swiper-pagination',
     clickable: true,
@@ -202,7 +184,7 @@ $(".closeNav-btn").click(function(){
   $("body").css("overflow" , "visible") ;
 })
 
-/************************************************************************ */
+/* ******************************************************************************** */
  
 
 // to top button
@@ -219,7 +201,7 @@ $(".toTop").click(function(){
 }) 
 
 
-/************************************************************************ */
+/* ******************************************************************************** */
 
 // open and close sideBar
 
@@ -234,7 +216,7 @@ $(".closeNav-btn").click(function(){
   $(".li-drop").removeClass("icon-rotate");
 })
 
-/************************************************************************ */
+/* ******************************************************************************** */
 
 
 // footer nested menu
@@ -249,6 +231,8 @@ if($(window).width() <= 768) {
 
   })
 }
+
+/* ******************************************************************************** */
 
 
 
@@ -268,8 +252,10 @@ if($(window).width() <= 768) {
 
 })
 
+/* ******************************************************************************** */
+
+
 
 //  wow animation
 new WOW().init();
 
-/************************************************************************ */
