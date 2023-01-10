@@ -92,10 +92,20 @@ img {
 
 .ancor-es {
   text-decoration: none;
-  color: #000;
 }
 .ancor-es:hover {
   text-decoration: none;
+}
+
+.my-ancor {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-ancor:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 ::-webkit-scrollbar {
@@ -298,10 +308,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-.mainslider-item a {
-  height: 100%;
-  width: 100%;
-}
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev {
   width: 37px;
@@ -401,6 +407,9 @@ figure::after {
   }
 }
 @media only screen and (max-width: 767px) {
+  .banner-desc .my-ancor.know-btn:hover {
+    color: #fff;
+  }
   .mainBanner .know-btn, .about .know-btn {
     font-size: 14px;
     padding: 5px 0;
@@ -1872,7 +1881,7 @@ nav {
   max-width: 100%;
 }
 
-.consult a, .lang2 a {
+.lang2 a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1880,11 +1889,11 @@ nav {
   color: #808080;
   transition: all linear 0.3s;
 }
-.consult a:hover, .lang2 a:hover {
+.lang2 a:hover {
   text-decoration: none;
   color: #ddb930;
 }
-.consult a img, .lang2 a img {
+.lang2 a img {
   -webkit-margin-start: 10px;
           margin-inline-start: 10px;
 }
