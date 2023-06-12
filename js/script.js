@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 // select to 
 // fire  select
+if($('.myselect').length > 0){
   $('.myselect').select2();
 
   
@@ -21,6 +22,8 @@ $(document).ready(function(){
   $(".service-select").select2({
     minimumResultsForSearch: Infinity
 });
+}
+
 
 /* ******************************************************************************** */
 
@@ -30,7 +33,6 @@ $(document).ready(function(){
 $(".add-file").click(function(e){
   e.preventDefault() ;
  $(this).siblings("input[type='file'").click()
-  //  $(this).parent().click() ;
 })
 
 /* ******************************************************************************** */
@@ -39,11 +41,14 @@ $(".add-file").click(function(e){
 
 // date picker 
 
-$(".dateInput").flatpickr({
+if($(".dateInput").length > 0 ){
+  $(".dateInput").flatpickr({
     enableTime: false,
     dateFormat: "Y-m-d H:i",
     disableMobile : "true"
 });
+}
+
 /* ******************************************************************************** */
 
 
@@ -67,9 +72,12 @@ $(".sector-manager-nested").click(function(){
 
 // select arrow rotate
 
-$(".select2").click(function(){
- $(".select2-selection__arrow").toggleClass("rotate-select-icon")
-})
+if($(".select2").length > 0) {
+  $(".select2").click(function(){
+    $(".select2-selection__arrow").toggleClass("rotate-select-icon")
+   })
+}
+
 
 
 /* ******************************************************************************** */

@@ -17,14 +17,6 @@ input[type=radio] {
   cursor: pointer;
 }
 
-html[dir=rtl] body {
-  text-align: right;
-}
-
-html[dir=ltr] body {
-  text-align: left;
-}
-
 .btn_es {
   padding: 0;
   background-color: transparent;
